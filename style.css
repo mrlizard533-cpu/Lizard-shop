@@ -1,0 +1,396 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  background: #f4f6f8;
+
+  color: #111;
+
+  min-height: 100vh;
+}
+
+
+.app {
+  max-width: 520px;
+
+  margin: auto;
+
+  padding: 18px 16px 90px;
+}
+
+
+/* Header */
+
+.header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+
+.logo {
+  font-size: 20px;
+
+  font-weight: 900;
+}
+
+
+.hello {
+  margin-top: 6px;
+
+  color: #777;
+}
+
+
+.avatar {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 14px;
+
+  background: #111;
+
+  color: white;
+
+  display: grid;
+
+  place-items: center;
+
+  font-weight: bold;
+}
+
+
+/* Pages */
+
+.page {
+  display: none;
+}
+
+
+.page.active {
+  display: block;
+}
+
+
+/* Wallet */
+
+.wallet {
+  background: #111;
+
+  color: white;
+
+  border-radius: 24px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.08);
+}
+
+
+.wallet span {
+  opacity: .7;
+}
+
+
+.wallet strong {
+  display: block;
+
+  font-size: 25px;
+
+  margin: 10px 0 16px;
+}
+
+
+.wallet button {
+  border: 0;
+
+  border-radius: 12px;
+
+  padding: 11px 14px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* Products */
+
+h2 {
+  font-size: 18px;
+
+  margin:
+    25px 0
+    12px;
+}
+
+
+.products {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 12px;
+}
+
+
+.product {
+  background: white;
+
+  border: 0;
+
+  border-radius: 20px;
+
+  padding: 20px 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  align-items: center;
+
+  font-size: 14px;
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,.04);
+
+  cursor: pointer;
+}
+
+
+.product .icon {
+  font-size: 34px;
+}
+
+
+/* Cards */
+
+.card,
+.empty {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 16px;
+}
+
+
+.row {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 13px 0;
+
+  border-bottom:
+    1px solid #eee;
+}
+
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+
+/* Bottom Navigation */
+
+nav {
+  position: fixed;
+
+  bottom: 0;
+
+  left: 0;
+
+  right: 0;
+
+  margin: auto;
+
+  max-width: 520px;
+
+  background: white;
+
+  border-top:
+    1px solid #ddd;
+
+  display: flex;
+
+  justify-content:
+    space-around;
+
+  padding:
+    8px 10px
+    calc(8px + env(safe-area-inset-bottom));
+
+  z-index: 5;
+}
+
+
+.nav {
+  background: none;
+
+  border: 0;
+
+  padding: 5px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  align-items: center;
+
+  font-size: 19px;
+
+  cursor: pointer;
+}
+
+
+.nav small {
+  font-size: 11px;
+}
+
+
+/* Modal */
+
+.modal {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0,0,0,.55);
+
+  display: flex;
+
+  align-items: flex-end;
+
+  z-index: 10;
+}
+
+
+.modal.hidden {
+  display: none;
+}
+
+
+.sheet {
+  background: white;
+
+  width: 100%;
+
+  max-width: 520px;
+
+  margin: auto;
+
+  border-radius:
+    24px 24px 0 0;
+
+  padding: 22px;
+
+  position: relative;
+
+  max-height: 85vh;
+
+  overflow: auto;
+}
+
+
+.close {
+  position: absolute;
+
+  left: 16px;
+
+  top: 12px;
+
+  border: 0;
+
+  background: #eee;
+
+  border-radius: 50%;
+
+  width: 32px;
+
+  height: 32px;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+
+/* Buttons */
+
+.option {
+  width: 100%;
+
+  padding: 15px;
+
+  margin: 7px 0;
+
+  border:
+    1px solid #ddd;
+
+  border-radius: 14px;
+
+  background: #fafafa;
+
+  text-align: right;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+.primary {
+  width: 100%;
+
+  padding: 15px;
+
+  border: 0;
+
+  border-radius: 14px;
+
+  background: #111;
+
+  color: white;
+
+  font-weight: bold;
+
+  margin-top: 10px;
+
+  cursor: pointer;
+}
+
+
+.input {
+  width: 100%;
+
+  padding: 14px;
+
+  border:
+    1px solid #ddd;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  margin-top: 8px;
+  }
