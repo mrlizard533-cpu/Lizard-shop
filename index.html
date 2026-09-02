@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lizard Shop</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <header class="header">
+
+    <div>
+      <div class="logo">🦎 LIZARD SHOP</div>
+      <div id="hello" class="hello">سلام 👋</div>
+    </div>
+
+    <div class="avatar">
+      L
+    </div>
+
+  </header>
+
+
+  <!-- Home -->
+  <main id="home" class="page active">
+
+    <!-- Wallet -->
+
+    <section class="wallet">
+
+      <span>موجودی کیف پول</span>
+
+      <strong id="balance">
+        ۱۰۰٬۰۰۰ تومان
+      </strong>
+
+      <button onclick="showTopup()">
+        ➕ افزایش موجودی
+      </button>
+
+    </section>
+
+
+    <h2>🛍 فروشگاه</h2>
+
+
+    <div class="products">
+
+      <button class="product" onclick="openProduct('stars')">
+        <span class="icon">⭐</span>
+        <span>Telegram Stars</span>
+      </button>
+
+
+      <button class="product" onclick="openProduct('gifts')">
+        <span class="icon">🎁</span>
+        <span>Telegram Gifts</span>
+      </button>
+
+
+      <button class="product" onclick="openProduct('premium')">
+        <span class="icon">👑</span>
+        <span>Telegram Premium</span>
+      </button>
+
+
+      <button class="product" onclick="openProduct('games')">
+        <span class="icon">🎮</span>
+        <span>جم / UC / CP</span>
+      </button>
+
+    </div>
+
+  </main>
+
+
+  <!-- Orders -->
+
+  <main id="orders" class="page">
+
+    <h2>📦 سفارش‌های من</h2>
+
+    <div id="ordersList" class="empty">
+      هنوز سفارشی ثبت نکرده‌اید.
+    </div>
+
+  </main>
+
+
+  <!-- Profile -->
+
+  <main id="profile" class="page">
+
+    <h2>👤 پروفایل</h2>
+
+    <section class="card">
+
+      <div class="row">
+        <span>نام</span>
+        <b id="name">کاربر</b>
+      </div>
+
+      <div class="row">
+        <span>Username</span>
+        <b id="username">@username</b>
+      </div>
+
+      <div class="row">
+        <span>موجودی</span>
+        <b id="profileBalance">
+          ۱۰۰٬۰۰۰ تومان
+        </b>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Bottom Navigation -->
+
+  <nav>
+
+    <button class="nav active" data-page="home">
+      🏠
+      <small>خانه</small>
+    </button>
+
+    <button class="nav" data-page="orders">
+      📦
+      <small>سفارش‌ها</small>
+    </button>
+
+    <button class="nav" data-page="profile">
+      👤
+      <small>من</small>
+    </button>
+
+  </nav>
+
+</div>
+
+
+<!-- Modal -->
+
+<div id="modal" class="modal hidden">
+
+  <div class="sheet">
+
+    <button class="close" onclick="closeModal()">
+      ×
+    </button>
+
+    <div id="modalContent"></div>
+
+  </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+  </html>
