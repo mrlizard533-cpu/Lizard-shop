@@ -1,0 +1,6 @@
+Lizard Shop GitHub Pages
+
+This folder contains only public frontend files.
+NEVER add TELEGRAM_BOT_TOKEN, SUPABASE_SERVICE_ROLE_KEY, SUPABASE_SECRET_KEYS,
+webhook secrets, or other private credentials here.
+Wallet credits, receipt approval, and order deductions are server-side in Supabase.
